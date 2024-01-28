@@ -1,0 +1,11 @@
+<library path="lib/libtrajectory_controller_example">
+  <class
+    name="example/trajectory_controller_example"
+    type="example::controller_handle_allocator_example"
+    base_class_type="moveit_ros_control_interface::ControllerHandleAllocator"
+  >
+    <description>
+      Example Controller Handle Allocator for MoveIt!
+    </description>
+  </class>
+</library>

@@ -1,0 +1,11 @@
+<library path="lib/libtrajectory_controller_example">
+  <class
+    name="example/trajectory_controller_example"
+    type="example::trajectory_controller_example"
+    base_class_type="controller_interface::ControllerBase"
+  >
+    <description>
+      Your custom trajectory controller description
+    </description>
+  </class>
+</library>
