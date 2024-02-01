@@ -127,8 +127,6 @@ include_directories(
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
    src/trajectory_controller_example.cpp
-   src/controller_handle_example.cpp
-   src/controller_handle_allocator_example.cpp
 )
 
 ## Add cmake target dependencies of the library
