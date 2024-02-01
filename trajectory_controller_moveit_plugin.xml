@@ -1,0 +1,11 @@
+<library path="libmoveit_ros_control_interface_trajectory_plugin">
+  <class
+    name="example/trajectory_controller_example"
+    type="moveit_ros_control_interface::JointTrajectoryControllerAllocator"
+    base_class_type="moveit_ros_control_interface::ControllerHandleAllocator"
+  >
+    <description>
+    Joint Trajectory Controlled Example Exported for MoveIt!
+    </description>
+  </class>
+</library>
