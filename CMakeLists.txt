@@ -14,7 +14,6 @@ find_package(catkin REQUIRED COMPONENTS
   moveit_ros_control_interface
   pluginlib
   roscpp
-  trajectory_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -109,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES trajectory_controller_example
-  CATKIN_DEPENDS actionlib control_msgs control_msgs controller_interface moveit_ros_control_interface pluginlib roscpp trajectory_msgs
+  CATKIN_DEPENDS actionlib control_msgs control_msgs controller_interface moveit_ros_control_interface pluginlib roscpp
   DEPENDS system_lib
 )
 

@@ -98,8 +98,7 @@ actionlib \
 pluginlib \
 moveit_ros_control_interface \
 controller_interface \
-control_msgs \
-trajectory_msgs
+control_msgs
 ```
 
 Otherwise, add the above dependencies to your package:
@@ -110,7 +109,6 @@ Otherwise, add the above dependencies to your package:
 * `moveit_ros_control_interface`: because you are exposing your controller to MoveIt Controller Manager
 * `actionlib`: because your controller needs an Action Server that will receive trajectory commands
 * `control_msgs`: includes the trajectory command message
-* `trajectory_msgs`: includes the "inner" trajectory command details
 
 Install any missing packages:
 
@@ -288,7 +286,7 @@ Make the necessary changes to `CMakeLists.txt` to get this to compile:
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES trajectory_controller_example
-  CATKIN_DEPENDS actionlib control_msgs control_msgs controller_interface moveit_ros_control_interface pluginlib roscpp trajectory_msgs
+  CATKIN_DEPENDS actionlib control_msgs control_msgs controller_interface moveit_ros_control_interface pluginlib roscpp
   DEPENDS system_lib
 )
 ```
