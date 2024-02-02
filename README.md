@@ -287,7 +287,6 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES trajectory_controller_example
   CATKIN_DEPENDS actionlib control_msgs control_msgs controller_interface moveit_ros_control_interface pluginlib roscpp
-  DEPENDS system_lib
 )
 ```
 
