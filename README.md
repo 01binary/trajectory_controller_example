@@ -1,3 +1,13 @@
+TODO
+
+- Describe FollowJointTrajectory and GripperCommand in more detail - parity with current doc!
+- Describe Optional Allowed Trajectory Execution Duration Parameters
+- Remapping /joint_states topic
+- Trajectory Execution Manager Options
+- Separate topic for Fake Controller Manager - parity with current LOD
+- Controller Switching and Namespaces - parity
+- Controllers for Multiple Nodes - better description than what I have
+
 # Integrating Hardware Controllers with MoveIt!
 
 There are a few paths for integrating a controller that moves robot joints with the MoveIt! framework, which accommodate simple usage scenarios all the way to advanced customization:
