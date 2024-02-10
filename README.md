@@ -212,11 +212,11 @@ Two example *controller handle* implementations are included with MoveIt:
 * [gripper_controller_handle.h](https://github.com/ros-planning/moveit/blob/master/moveit_plugins/moveit_simple_controller_manager/include/moveit_simple_controller_manager/gripper_controller_handle.h)
   * Implemented inline in the same header file
 
-As you can see, writing a [controller handle](https://github.com/ros-planning/moveit/blob/master/moveit_core/controller_manager/include/moveit/controller_manager/controller_manager.h#L104) comes down to:
-* Implementing a `sendTrajectory` method that translates [moveit_msgs::RobotTrajectory](http://docs.ros.org/en/noetic/api/moveit_msgs/html/msg/RobotTrajectory.html) to a format the controller can understand
-* Implementing a `cancelExecution` method to tell the controller to stop any active trajectories
-* Implementing a `waitForExecution` method that will block the calling thread until the controller finishes or the `timeout` is reached
-* Implementing a `getLastExecutionStatus` method that returns the status of the last requested trajectory.
+As you can see, writing a [controller handle](https://github.com/ros-planning/moveit/blob/master/moveit_core/controller_manager/include/moveit/controller_manager/controller_manager.h#L104) comes down to implementing:
+* `sendTrajectory` method that translates [moveit_msgs::RobotTrajectory](http://docs.ros.org/en/noetic/api/moveit_msgs/html/msg/RobotTrajectory.html) to a format the controller can understand
+* `cancelExecution` method to tell the controller to stop any active trajectories
+* `waitForExecution` method that will block the calling thread until the controller finishes or the `timeout` is reached
+* `getLastExecutionStatus` method that returns the status of the last requested trajectory.
 
 One example *controller handle allocator* plugin implementation is included with MoveIt:
 
