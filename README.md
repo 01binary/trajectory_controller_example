@@ -353,7 +353,7 @@ namespace example
 
 Once implemented, the controller handle does not need to be exported, since it's returned by the controller handle allocator, which is exported.
 
-## Custom Controllers
+## Custom Controllers and Managers
 
 Custom controllers not managed by ROS Controller Manager can be integrated by implementing MoveIt *Controller Handle* and *Controller Handle Allocator* that conform to the MoveIt interface and can be loaded by MoveIt *Simple* or *ROS Control* Controller Manager as described in the previous section.
 
