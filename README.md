@@ -1,11 +1,15 @@
-TODO
+=== TODO
 
 - Describe Optional Allowed Trajectory Execution Duration Parameters
-- Remapping /joint_states topic
-- Trajectory Execution Manager Options
-- Separate topic for Fake Controller Manager - parity with current LOD
-- Controller Switching and Namespaces - parity
-- Controllers for Multiple Nodes - better description than what I have
+- Describe how to remap /joint_states topic
+- Describe Trajectory Execution Manager Options
+- Better description for Fake Controller Manager - parity with current documentation
+- Describe controller Switching and Namespaces - bring to parity with current documentation
+- Better description for multi-controller manager - bring to parity with current documentation
+- Convert to documentation format used by MoveIt / blend with existing style (hyperlinks to other MoveIt topics may have to be made relative instead of absolute)
+- Consider splitting some details off to plugins topic and linking to it
+
+===
 
 # Low Level Controllers
 
