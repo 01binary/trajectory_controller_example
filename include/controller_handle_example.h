@@ -38,12 +38,35 @@ public:
   // MoveIt calls this method when it wants to send a trajectory goal to execute
   bool sendTrajectory(const moveit_msgs::RobotTrajectory& trajectory) override
   {
-    // comment here
+    if (!actionClient_)
+    {
+      ROS_ERROR_NAMED(getName().c_str(), "Action client not connected, could not send trajectory");
+
+      return false;
+    }
+
+    control_msgs::FollowJointTrajectoryGoal goal;
+    goal.trajectory = trajectory.joint_trajectory;
+
+    actionClient_->sendGoal(
+        goal,
+        [this](const auto& state, const auto& result) {
+          // Completed trajectory
+          done_ = true;
+        },
+        [this] {
+          // Beginning trajectory
+        },
+        [this](const auto& feedback) {
+          // Trajectory feedback
+        });
+
+    done_ = false;
+
     return true;
   }
 
-  // MoveIt calls this method when it wants a blocking call that returns when
-  // done
+  // MoveIt calls this method when it wants a blocking call until done
   bool waitForExecution(const ros::Duration& timeout = ros::Duration(0)) override
   {
     if (actionClient_ && !done_)
