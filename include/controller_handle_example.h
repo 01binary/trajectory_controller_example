@@ -17,9 +17,9 @@ private:
   std::shared_ptr<actionlib::SimpleActionClient<control_msgs::FollowJointTrajectoryAction>> actionClient_;
 
 public:
-  controller_handle_example(const std::string& name, const std::string& action_ns)
+  controller_handle_example(const std::string& name)
   {
-    std::string actionName = name + "/" + action_ns;
+    std::string actionName = name + "/follow_joint_trajectory";
 
     actionClient_ =
         std::make_shared<actionlib::SimpleActionClient<control_msgs::FollowJointTrajectoryAction>>(actionName, true);

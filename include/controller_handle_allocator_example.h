@@ -11,7 +11,7 @@ public:
   moveit_controller_manager::MoveItControllerHandlePtr alloc(const std::string& name,
                                                              const std::vector<std::string>& resources) override
   {
-    return std::make_shared<controller_handle_example>(name, std::string("follow_joint_trajectory"));
+    return std::make_shared<controller_handle_example>(name);
   }
 };
 }  // namespace example
